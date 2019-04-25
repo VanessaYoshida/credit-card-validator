@@ -1,14 +1,13 @@
-const { assert } = require('chai');
-const isVowel = require('../lib/index');
+const chai = require('chai');
+const expect = chai.expect;
+const CC = require('../lib/index');
 
 describe('cardValidator()', () => {
-    
-    it('Deveria retornar true para a letra a', () => {
-        assert.equal(isVowel('a'), true);
+    it('Deveria retornar true para 5526988157883653', () => {
+        expect(CC.cardValidator(5526988157883653)).to.equal(true);
     });
     
-    it('Deveria retornar false para a letra b', () => {
-        assert.equal(isVowel('b'), false);
+    it('Deveria retornar false para 1234567891234567', () => {
+        expect(CC.cardValidator(1234567891234567)).to.equal(false);
     });
-    
 });
