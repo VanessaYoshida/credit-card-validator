@@ -3,6 +3,19 @@ const expect = chai.expect;
 const CC = require('../lib/index');
 
 describe('cardValidator()', () => {
+
+    describe ("Verificação se o valor digitado é NaN", () => {
+        it('Deveria retornar um erro que só é permitido números', () => {
+            expect(CC.cardValidator('asdfghjrtfgf')).to.throw();
+        });
+    });
+
+    describe ("Verificação se o campo está vazio", () => {
+        it('Deveria retornar um erro que não permitido campo vazio', () => {
+            expect(CC.cardValidator('')).to.throw();
+        });
+    });
+    
     describe ("Verificação dos números do cartão de crédito", () => {
         it('Deveria retornar true para a numeração: 5526988157883653', () => {
             expect(CC.cardValidator('5526988157883653')).to.equal(true);
