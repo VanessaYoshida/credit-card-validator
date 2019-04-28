@@ -25,8 +25,9 @@ Formado pelos seis primeiros digitos, que referem-se a bandeira do cartão.
 - E o último grupo é o **Código de Segurança do Cartão (Card Security Code – CSC)** que são os dígitos contidos atrás do cartão compostos por três ou quatro dígitos utilizado para transsações não presenciais.
 
 ##Ferramentas Utilizadas
-Para esta biblioteca foram utilizados Javascript, Node.JS e os frameworks Mocha e Chai.
-
+Para esta biblioteca foram utilizados Javascript, Node.JS, Mocha, Chai e Nyc.
+Foi utilizado o Wallaby para fazer Teste Integrado Contínuo.
+E também foi utilizado o Eslint para encontrar padrões problemáticos ou códigos que não seguem determinadas diretrizes de estilo.
 
 ## Como Instalar:
 

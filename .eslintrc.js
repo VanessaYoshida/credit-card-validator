@@ -43,10 +43,7 @@ module.exports = {
         ],
         'space-infix-ops': [
             'error', 
-            { 
-                'int32Hint': false,
-                'exceptions': ['--', '++'] 
-            }
+            { 'int32Hint': false }
         ],
         'comma-spacing': [
             'error', 
@@ -65,8 +62,7 @@ module.exports = {
             { 'afterColon': true }
         ],
         'no-multi-spaces': [
-            'error', 
-            { align: "value" }
+            'error'
         ],
         'space-in-parens': [
             'error', 
