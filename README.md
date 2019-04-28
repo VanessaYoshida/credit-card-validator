@@ -8,8 +8,8 @@ Os números do Cartão de Crédito são criados de acordo com a norma ISO/IEC 78
 
 *[Entenda os Números do Cartão de Crédito](#Entenda-os-Números-do-Cartão-de-Crédito)
 *[Ferramentas Utilizadas](#Ferramentas-Utilizadas)
-*[](#)
-*[](#)
+*[Como Instalar](#Como-Instalar)
+*[Como Utilizar](#Como-Utilizar)
 *[](#)
 *[](#)
 *[](#)
@@ -18,17 +18,17 @@ Os números do Cartão de Crédito são criados de acordo com a norma ISO/IEC 78
 
 ## Entenda os Números do Cartão de Crédito
 Os números do Cartão de Crédito se subdividem em grupos, onde cada grupo representam algo.
-O Primeiro Grupo é o *Número de Identificação do Emissor (Issuer identification Number – IIN)*
+- O Primeiro Grupo é o **Número de Identificação do Emissor (Issuer identification Number – IIN)**
 Formado pelos seis primeiros digitos, que referem-se a bandeira do cartão.
-O Segundo grupo é o *Número da Conta (Account Number ou Account Identifier)* que vai do sétimo dígito até o penúltimo número, utilizado para a identificação do cliente.
-O Terceiro é o *Dígito Verificador(Check Sum)* que é o último número contido nessa sequência, utilizado para Verificação de Segurança.
-E o último grupo é o *Código de Segurança do Cartão (Card Security Code – CSC)* que são os dígitos contidos atrás do cartão compostos por três ou quatro dígitos utilizado para transsações não presenciais.
+- O Segundo grupo é o **Número da Conta (Account Number ou Account Identifier)** que vai do sétimo dígito até o penúltimo número, utilizado para a identificação do cliente.
+- O Terceiro é o **Dígito Verificador(Check Sum)** que é o último número contido nessa sequência, utilizado para Verificação de Segurança.
+- E o último grupo é o **Código de Segurança do Cartão (Card Security Code – CSC)** que são os dígitos contidos atrás do cartão compostos por três ou quatro dígitos utilizado para transsações não presenciais.
 
 ##Ferramentas Utilizadas
 Para esta biblioteca foram utilizados Javascript, Node.JS e os frameworks Mocha e Chai.
 
 
-## Como instalar:
+## Como Instalar:
 
 ```shell
 
@@ -36,19 +36,32 @@ $  npm install credit-card-validator
 
 ```
 
-## Como utilizar:
+## Como Utilizar:
 
 ```node
-
+> const cardValidator = require("chayote-lib");
+> console.log(cardValidator('5526988157883653'))
 
 ```
+
+## Para Desenvolvedores:
+Caso você esteja querendo entender como funciona a biblioteca e quer fazer testes é necessário instalar as ferramentas necessárias. Segue passo-a-passo:
+Abra o seu terminal, seguindo os passos abaixo você vai criar uma pasta nova e vai instalar o que for necessário:
+
+> mkdir pastaCartaoDeCredito
+> cd pastaCartaoDeCredito
+> npm init
+(nesse passo de cima ele cria automático um novo projeto com o arquivo package.json, depois vai ser p)
+
+
 
 ## Cálculo para verificar o número do Cartão
 O cálculo é feito a partir do Algoritmo de Luhn, que é uma fórmula utilizada para validar uma variedade de números de identificação.
 
 Do dígito mais à direita, que é o dígito de verificação, e movendo para a esquerda, dobre o valor de cada segundo dígito. O dígito de verificação não é dobrado; o primeiro dígito dobrado é imediatamente à esquerda do dígito de verificação. Se o resultado dessa operação de duplicação for maior que 9 (por exemplo, 8 × 2 = 16), adicione os dígitos do resultado (por exemplo, 16: 1 + 6 = 7, 18: 1 + 8 = 9) ou, alternativamente , o mesmo resultado final pode ser encontrado ao subtrair 9 desse resultado (por exemplo, 16: 16 - 9 = 7, 18: 18 - 9 = 9).
 Pegue a soma de todos os dígitos.
-Se o módulo total 10 é igual a 0 (se o total terminar em zero), então o número é válido de acordo com a fórmula de Luhn; outra coisa não é válida.
+Se o módulo total 10 é igual a 0 (se o total terminar em zero), então o número é válido de acordo com a fórmula de Luhn, se der outro resultado não é válida. 
+Um outro método alternativo também é: depois de calcular a soma dos dígitos, multiplique por 9, e do resultado pegue o dígito das unidades (último número do resultado), ele é o dígito verificador.
 
 ## Objetivo deste Projeto
 Construir uma biblioteca que atenda aos requisitos abaixo:
