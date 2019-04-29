@@ -7,14 +7,14 @@ Os números do Cartão de Crédito são criados de acordo com a norma ISO/IEC 78
 ## Índice
 
 *[Entenda os Números do Cartão de Crédito](#Entenda-os-Números-do-Cartão-de-Crédito)
-*[Ferramentas Utilizadas](#Ferramentas-Utilizadas)
 *[Como Instalar](#Como-Instalar)
 *[Como Utilizar](#Como-Utilizar)
-*[](#)
-*[](#)
-*[](#)
-*[](#)
-*[](#)
+*[Para Desenvolvedores](#Para-Desenvolvedores)
+*[Roadmap oficial do projeto](#Roadmap-oficial-do-projeto)
+*[Ferramentas Utilizadas](#Ferramentas-Utilizadas)
+*[Cálculo para verificar o número do Cartão](#Cálculo-para-verificar-o-número-do-Cartão)
+*[Objetivo deste Projeto](#Objetivo-deste-Projeto)
+*[Outras informações importantes no Cartão](#Outras-informações-importantes-no-Cartão)
 
 ## Entenda os Números do Cartão de Crédito
 Os números do Cartão de Crédito se subdividem em grupos, onde cada grupo representam algo.
@@ -24,37 +24,49 @@ Formado pelos seis primeiros digitos, que referem-se a bandeira do cartão.
 - O Terceiro é o **Dígito Verificador(Check Sum)** que é o último número contido nessa sequência, utilizado para Verificação de Segurança.
 - E o último grupo é o **Código de Segurança do Cartão (Card Security Code – CSC)** que são os dígitos contidos atrás do cartão compostos por três ou quatro dígitos utilizado para transsações não presenciais.
 
-##Ferramentas Utilizadas
-Para esta biblioteca foram utilizados Javascript, Node.JS, Mocha, Chai e Nyc.
-Foi utilizado o Wallaby para fazer Teste Integrado Contínuo.
-E também foi utilizado o Eslint para encontrar padrões problemáticos ou códigos que não seguem determinadas diretrizes de estilo.
-
 ## Como Instalar:
 
 ```shell
 
 $  npm install credit-card-validator
 
+ou 
+
+$ sudo npm install credit-card-validator
+
 ```
 
 ## Como Utilizar:
 
 ```node
-> const cardValidator = require("chayote-lib");
+> const cardValidator = require("credit-card-validator");
 > console.log(cardValidator('5526988157883653'))
 
 ```
 
 ## Para Desenvolvedores:
-Caso você esteja querendo entender como funciona a biblioteca e quer fazer testes é necessário instalar as ferramentas necessárias. Segue passo-a-passo:
+Caso você esteja querendo entender como funciona a biblioteca e quer fazer testes, é necessário instalar as ferramentas necessárias. Segue passo-a-passo:
 Abra o seu terminal, seguindo os passos abaixo você vai criar uma pasta nova e vai instalar o que for necessário:
 
 > mkdir pastaCartaoDeCredito
 > cd pastaCartaoDeCredito
 > npm init
-(nesse passo de cima ele cria automático um novo projeto com o arquivo package.json, depois vai ser p)
+(nesse passo de cima ele cria automático um novo projeto com o arquivo package.json, depois vai ser requerido algumas informações que é necessário preencher)
+> code . (para abrir o arquivo com o visual studio)
+> npm install credit-card-validator (que é para instalar a biblioteca)
+Dentro dessa pasta cria um arquivo (pode ser com o nome index.js)
+E cola os comandos: 
+>const cardValidator = require("credit-card-validator");
+> console.log(cardValidator('5526988157883653'))
 
+## Roadmap oficial do projeto
+### versão 1.0.0 (released)
+- Funcionalidades: Verificação se número de Cartão de Crédito é válido ou não.
 
+## Ferramentas Utilizadas
+Para esta biblioteca foram utilizados Javascript, Node.JS, Mocha, Chai e Nyc.
+Foi utilizado o Wallaby para fazer Teste Integrado Contínuo.
+E também foi utilizado o Eslint para encontrar padrões problemáticos ou códigos que não seguem determinadas diretrizes de estilo.
 
 ## Cálculo para verificar o número do Cartão
 O cálculo é feito a partir do Algoritmo de Luhn, que é uma fórmula utilizada para validar uma variedade de números de identificação.
@@ -77,12 +89,3 @@ package.json com nome, versão, descrição, autores, licença, dependências, s
 ## Outras informações importantes no Cartão
 Se você deseja utilizar essa biblioteca em sua aplicação web lembre-se que outras informações importantes que é necessário pedir para o usuário é a data de validade do cartão, e o nome do titular, escrito exatamente da forma como aparece no cartão (por exemplo, com abreviaturas).
 Elas têm sido bastante utilizadas nas transações não presenciais, também para compensar a impossibilidade de verificar fisicamente o cartão.
-
-## Próxima Versão
-Verificar as seguintes bandeiras:
-*Visa
-*Mastercard
-*Amex
-*DinersClub
-*Discover
-*JCB

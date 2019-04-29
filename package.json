@@ -9,7 +9,7 @@
     "credit card"
   ],
   "version": "1.0.0",
-  "main": ".lib/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "nyc mocha"
   },
