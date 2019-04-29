@@ -54,9 +54,15 @@ describe('cardValidator()', () => {
       expect(() => CC.cardValidator(30354535753490)).to.throw(TypeError);
     });
   });
-  // describe('Verificação se campo contém espaço ou ponto:', () => {
-  //   it('Deveria retornar um erro caso tenha espaço entre os números', () => {
-  //     expect(() => CC.cardValidator('3026 256644 0814')).to.throw(TypeError);
-  //   });
-  // });
+  describe('Verificação se campo contém espaço ou ponto:', () => {
+    it('Deveria retornar um erro caso tenha espaço entre os números', () => {
+      expect(() => CC.cardValidator('3026 256644 0814')).to.throw(TypeError);
+    });
+    it('Deveria retornar um erro caso tenha ponto entre os números', () => {
+      expect(() => CC.cardValidator('3026.256644.0814')).to.throw(TypeError);
+    });
+    it('Deveria retornar um erro caso tenha hífen entre os números', () => {
+      expect(() => CC.cardValidator('3026-256644-0814')).to.throw(TypeError);
+    });
+  });
 });
