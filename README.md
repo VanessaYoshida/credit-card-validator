@@ -32,15 +32,17 @@ $  npm install credit-card-validator
 
 ou 
 
-$ sudo npm install credit-card-validator
+$  sudo npm install credit-card-validator
 
 ```
 
 ## Como Utilizar:
 
 ```node
-> const cardValidator = require("credit-card-validator");
-> console.log(cardValidator('5526988157883653'))
+> const CC = require("credit-card-validator");
+> console.log(CC.cardValidator('5526988157883653'))
+
+>sudo npm test
 
 ```
 
@@ -48,16 +50,22 @@ $ sudo npm install credit-card-validator
 Caso você esteja querendo entender como funciona a biblioteca e quer fazer testes, é necessário instalar as ferramentas necessárias. Segue passo-a-passo:
 Abra o seu terminal, seguindo os passos abaixo você vai criar uma pasta nova e vai instalar o que for necessário:
 
+```node
 > mkdir pastaCartaoDeCredito
+
 > cd pastaCartaoDeCredito
+
 > npm init
 (nesse passo de cima ele cria automático um novo projeto com o arquivo package.json, depois vai ser requerido algumas informações que é necessário preencher)
 > code . (para abrir o arquivo com o visual studio)
+
 > npm install credit-card-validator (que é para instalar a biblioteca)
-Dentro dessa pasta cria um arquivo (pode ser com o nome index.js)
+
+Dentro dessa pasta cria um arquivo echo > index.js (pode ser com o nome index.js)
 E cola os comandos: 
->const cardValidator = require("credit-card-validator");
+> const cardValidator = require("credit-card-validator");
 > console.log(cardValidator('5526988157883653'))
+```
 
 ## Roadmap oficial do projeto
 ### versão 1.0.0 (released)
@@ -78,13 +86,13 @@ Um outro método alternativo também é: depois de calcular a soma dos dígitos,
 
 ## Objetivo deste Projeto
 Construir uma biblioteca que atenda aos requisitos abaixo:
-<p>*README.md* com descrição do módulo, instruções de instalação, uso e documentação da API.</p>
-<p>*index.js:* Biblioteca deve exportar uma função e fazer uso de features de ES6 onde for apropriado.
+<p>**README.md** com descrição do módulo, instruções de instalação, uso e documentação da API.</p>
+<p>**index.js:** Biblioteca deve exportar uma função e fazer uso de features de ES6 onde for apropriado.
 package.json com nome, versão, descrição, autores, licença, dependências, scripts (pretest, test, ...)
 .eslintrc com configuração para linter (ver guia de estilo de JavaScript)</p>
-<p>*test/index.spec.js:* com as rotinas de teste escritas para esta biblioteca. Os testes devem ser implementados com Mocha e NYC (ver vídeo tutorial do Daniel :D) </p>
+<p>**test/index.spec.js:** com as rotinas de teste escritas para esta biblioteca. Os testes devem ser implementados com Mocha e NYC </p>
 <p>*.gitignore* para ignorar node_modules ou outras pastas que não devem ser incluídas no controle de versões (git).</p>
-<p>Fazer uso do *TDD (Test Driven Development)* onde seu principal objetivo é criar testes antes de desenvolver determinado código, visando o mínimo de código possível. Os testes passando se faz necessário refatorar até satisfazer o objetivo final que é criar códigos mais limpos, testáveis e reduzir o máximo de probabilidade de erros no código. </p>
+<p>Fazer uso do **TDD (Test Driven Development)** onde seu principal objetivo é criar testes antes de desenvolver determinado código, visando o mínimo de código possível. Os testes passando se faz necessário refatorar até satisfazer o objetivo final que é criar códigos mais limpos, testáveis e reduzir o máximo de probabilidade de erros no código. </p>
 
 ## Outras informações importantes no Cartão
 Se você deseja utilizar essa biblioteca em sua aplicação web lembre-se que outras informações importantes que é necessário pedir para o usuário é a data de validade do cartão, e o nome do titular, escrito exatamente da forma como aparece no cartão (por exemplo, com abreviaturas).
