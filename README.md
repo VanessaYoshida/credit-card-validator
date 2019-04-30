@@ -11,7 +11,7 @@ Os números do Cartão de Crédito são criados de acordo com a norma ISO/IEC 78
 * [Como Utilizar](#Como-Utilizar)
 * [Para Desenvolvedores](#Para-Desenvolvedores)
 * [Roadmap oficial do projeto](#Roadmap-oficial-do-projeto)
-* [Entenda os Números do Cartão de Crédito}(#Entenda-os-Números-do-Cartão-de-Crédito)
+* [Entenda os Números do Cartão de Crédito](#Entenda-os-Números-do-Cartão-de-Crédito)
 * [Cálculo para verificar o número do Cartão](#Cálculo-para-verificar-o-número-do-Cartão)
 * [Objetivo deste Projeto](#Objetivo-deste-Projeto)
 * [Outras informações importantes no Cartão](#Outras-informações-importantes-no-Cartão)
