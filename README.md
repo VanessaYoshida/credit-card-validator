@@ -2,27 +2,21 @@
 
 **Esta biblioteca se destina à fazer a verificação dos dados do Cartão de Crédito para uso em aplicações web.**
 Na versão atual é capaz de verificar se o número do Cartão de Crédito é valido.
-Os números do Cartão de Crédito são criados de acordo com a norma ISO/IEC 7812, onde nela é estabelecido um padrão para a identificação de um cartão eletrônico. 
+Os números do Cartão de Crédito são criados de acordo com a norma ISO/IEC 7812, onde nela é estabelecida um padrão para a identificação de um cartão eletrônico. 
 
 ## Índice
 
-*[Entenda os Números do Cartão de Crédito](#Entenda-os-Números-do-Cartão-de-Crédito)
 *[Como Instalar](#Como-Instalar)
 *[Como Utilizar](#Como-Utilizar)
 *[Para Desenvolvedores](#Para-Desenvolvedores)
 *[Roadmap oficial do projeto](#Roadmap-oficial-do-projeto)
 *[Ferramentas Utilizadas](#Ferramentas-Utilizadas)
+*[Entenda os Números do Cartão de Crédito](#Entenda-os-Números-do-Cartão-de-Crédito)
 *[Cálculo para verificar o número do Cartão](#Cálculo-para-verificar-o-número-do-Cartão)
 *[Objetivo deste Projeto](#Objetivo-deste-Projeto)
 *[Outras informações importantes no Cartão](#Outras-informações-importantes-no-Cartão)
 
-## Entenda os Números do Cartão de Crédito
-Os números do Cartão de Crédito se subdividem em grupos, onde cada grupo representam algo.
-- O Primeiro Grupo é o **Número de Identificação do Emissor (Issuer identification Number – IIN)**
-Formado pelos seis primeiros digitos, que referem-se a bandeira do cartão.
-- O Segundo grupo é o **Número da Conta (Account Number ou Account Identifier)** que vai do sétimo dígito até o penúltimo número, utilizado para a identificação do cliente.
-- O Terceiro é o **Dígito Verificador(Check Sum)** que é o último número contido nessa sequência, utilizado para Verificação de Segurança.
-- E o último grupo é o **Código de Segurança do Cartão (Card Security Code – CSC)** que são os dígitos contidos atrás do cartão compostos por três ou quatro dígitos utilizado para transsações não presenciais.
+
 
 ## Como Instalar:
 
@@ -57,14 +51,14 @@ Abra o seu terminal, seguindo os passos abaixo você vai criar uma pasta nova e 
 
 > npm init
 (nesse passo de cima ele cria automático um novo projeto com o arquivo package.json, depois vai ser requerido algumas informações que é necessário preencher)
-> code . (para abrir o arquivo com o visual studio)
 
 > npm install credit-card-validator (que é para instalar a biblioteca)
 
 Dentro dessa pasta cria um arquivo echo > index.js (pode ser com o nome index.js)
-E cola os comandos: 
-> const cardValidator = require("credit-card-validator");
-> console.log(cardValidator('5526988157883653'))
+> code . (para abrir o arquivo com o visual studio. Ou caso use outro editor, abra o arquivo nesse editor)
+E cole os comandos: 
+> const CC = require("credit-card-validator");
+> console.log(CC.cardValidator('5526988157883653'))
 ```
 
 ## Roadmap oficial do projeto
@@ -75,6 +69,14 @@ E cola os comandos:
 Para esta biblioteca foram utilizados Javascript, Node.JS, Mocha, Chai e Nyc.
 Foi utilizado o Wallaby para fazer Teste Integrado Contínuo.
 E também foi utilizado o Eslint para encontrar padrões problemáticos ou códigos que não seguem determinadas diretrizes de estilo.
+
+## Entenda os Números do Cartão de Crédito
+Os números do Cartão de Crédito se subdividem em grupos, onde cada grupo representam algo.
+- O Primeiro Grupo é o **Número de Identificação do Emissor (Issuer identification Number – IIN)**
+Formado pelos seis primeiros digitos, que referem-se a bandeira do cartão.
+- O Segundo grupo é o **Número da Conta (Account Number ou Account Identifier)** que vai do sétimo dígito até o penúltimo número, utilizado para a identificação do cliente.
+- O Terceiro é o **Dígito Verificador(Check Sum)** que é o último número contido nessa sequência, utilizado para Verificação de Segurança.
+- E o último grupo é o **Código de Segurança do Cartão (Card Security Code – CSC)** que são os dígitos contidos atrás do cartão compostos por três ou quatro dígitos utilizado para transsações não presenciais.
 
 ## Cálculo para verificar o número do Cartão
 O cálculo é feito a partir do Algoritmo de Luhn, que é uma fórmula utilizada para validar uma variedade de números de identificação.
