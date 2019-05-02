@@ -57,7 +57,6 @@ Abra o seu terminal, seguindo os passos abaixo você vai criar uma pasta nova e 
 
 > npm init
 (nesse passo de cima ele cria automático um novo projeto com o arquivo package.json, depois vai ser requerido algumas informações que é necessário preencher)
-> code . (para abrir o arquivo com o visual studio)
 
 > npm install validator-credit-card-1 (que é para instalar a biblioteca)
 
@@ -68,8 +67,8 @@ Dentro dessa pasta cria um arquivo echo > index.js (pode ser com o nome que voc�
 > code .
 
 E cola os comandos: 
-> const cardValidator = require("credit-card-validator");
-> console.log(cardValidator('5526988157883653'))
+> const CC = require("credit-card-validator");
+> console.log(CC.cardValidator('5526988157883653'))
 ```
 Dentro dessa função CC.cardValidator('*numero do cartão de crédito*') você pode digitar o número do cartão de crédito para saber se é um número válido ou não.
 
