@@ -55,14 +55,14 @@ describe('cardValidator()', () => {
     });
   });
   describe('Verificação se campo contém espaço ou ponto:', () => {
-    it('Deveria retornar um erro caso tenha espaço entre os números', () => {
-      expect(() => CC.cardValidator('3026 256644 0814')).to.throw(TypeError);
+    it('Deveria passar caso tenha espaço entre os números', () => {
+      expect(CC.cardValidator('3026 256644 0814')).to.equal(true);
     });
-    it('Deveria retornar um erro caso tenha ponto entre os números', () => {
-      expect(() => CC.cardValidator('3026.256644.0814')).to.throw(TypeError);
+    it('Deveria passar caso tenha ponto entre os números', () => {
+      expect(CC.cardValidator('3026.256644.0814')).to.equal(true);
     });
-    it('Deveria retornar um erro caso tenha hífen entre os números', () => {
-      expect(() => CC.cardValidator('3026-256644-0814')).to.throw(TypeError);
+    it('Deveria passar caso tenha hífen entre os números', () => {
+      expect(CC.cardValidator('3026-256644-0814')).to.equal(true);
     });
   });
 });

@@ -1,18 +1,22 @@
 {
   "name": "validator-credit-card-1",
+  "version": "1.0.1",
   "description": "Credit Card Validator",
   "readmeFilename": "README.md",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "./node_modules/nyc/bin/nyc.js ./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VanessaYoshida/credit-card-validator"
+  },
   "keywords": [
     "credit",
     "card",
     "validator",
     "credit card"
   ],
-  "version": "1.0.1",
-  "main": "./lib/index.js",
-  "scripts": {
-    "test": "./node_modules/nyc/bin/nyc.js ./node_modules/mocha/bin/mocha"
-  },
   "author": {
     "name": "Vanessa Yoshida",
     "email": "vanessayoshida92@gmail.com"
@@ -23,9 +27,5 @@
     "eslint": "^5.16.0",
     "mocha": "^6.1.4",
     "nyc": "^14.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/VanessaYoshida/credit-card-validator"
   }
 }
