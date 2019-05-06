@@ -25,11 +25,11 @@ E também foi utilizado o Eslint para encontrar padrões problemáticos ou códi
 
 ```shell
 
-$  npm install credit-card-validator
+$  npm install validator-credit-card-1
 
 ou 
 
-$  sudo npm install credit-card-validator
+$  sudo npm install validator-credit-card-1
 
 ```
 
@@ -38,7 +38,7 @@ Abra o terminal na pasta em que a biblioteca já está instalada e digite os com
 ```node
 > node
 > const CC = require("validator-credit-card-1");
-> console.log(CC.cardValidator('5526988157883653'))
+> CC.cardValidator('5526988157883653')
 
 >sudo npm test
 
@@ -47,7 +47,7 @@ Dentro dessa função CC.cardValidator('*numero do cartão de crédito*') você 
 
 
 ## Para Desenvolvedores:
-Caso você esteja querendo entender como funciona a biblioteca e quer fazer testes, é necessário instalar as ferramentas necessárias. Segue passo-a-passo:
+Caso você esteja querendo entender como funciona a biblioteca e quer fazer testes, é necessário instalar as ferramentas necessárias. Segue o passo-a-passo de uma das formas que você pode fazer seus testes.
 Abra o seu terminal, seguindo os passos abaixo você vai criar uma pasta nova e vai instalar o que for necessário:
 
 ```node
@@ -69,15 +69,23 @@ Dentro dessa pasta cria um arquivo echo > index.js (pode ser com o nome que voc�
 Dentro dessa pasta cria um arquivo echo > index.js (pode ser com o nome index.js)
 > code . (para abrir o arquivo com o visual studio. Ou caso use outro editor, abra o arquivo nesse editor)
 E cole os comandos: 
-> const CC = require("credit-card-validator");
-> console.log(CC.cardValidator('5526988157883653'))
+> const CC = require("validator-credit-card-1");
+> CC.cardValidator('5526988157883653')
+
 ```
 Dentro dessa função CC.cardValidator('*numero do cartão de crédito*') você pode digitar o número do cartão de crédito para saber se é um número válido ou não.
 
+E para testar a função da biblioteca abra o terminal nessa pasta e digite: 
+node index.js
+
+Caso seja um cpf válido ele deve retornar true, senão ele retorna false.
 
 ## Roadmap oficial do projeto
 ### versão 1.0.0 (released)
 - Funcionalidades: Verificação se número de Cartão de Crédito é válido ou não.
+
+### versão 1.0.1 
+- Acrescentado a funcionalidade para tirar pontos ou espaços separadores, para não correr o risco de dar algum erro.
 
 ## Entenda os Números do Cartão de Crédito
 Os números do Cartão de Crédito se subdividem em grupos, onde cada grupo representam algo.
