@@ -1,4 +1,4 @@
-# Validador de Cartão de Crédito v.1.0.0
+# Validador de Cartão de Crédito v.1.0.3
 
 **Esta biblioteca se destina à fazer a verificação dos dados do Cartão de Crédito para uso em aplicações web.**
 Na versão atual é capaz de verificar se o número do Cartão de Crédito é valido ou não.
@@ -69,7 +69,7 @@ Dentro dessa pasta cria um arquivo echo > index.js (pode ser com o nome que voc�
 Dentro dessa pasta cria um arquivo echo > index.js (pode ser com o nome index.js)
 > code . (para abrir o arquivo com o visual studio. Ou caso use outro editor, abra o arquivo nesse editor)
 E cole os comandos: 
-> const CC = require("validator-credit-card-1");
+> const CC = require("./node_modules/validator-credit-card-1/lib/index.js");
 > CC.cardValidator('5526988157883653')
 
 ```
@@ -78,7 +78,7 @@ Dentro dessa função CC.cardValidator('*numero do cartão de crédito*') você 
 E para testar a função da biblioteca abra o terminal nessa pasta e digite: 
 node index.js
 
-Caso seja um cpf válido ele deve retornar true, senão ele retorna false.
+Caso seja um número de cartão válido ele deve retornar true, senão ele retorna false.
 
 ## Roadmap oficial do projeto
 ### versão 1.0.0 (released)
@@ -86,6 +86,9 @@ Caso seja um cpf válido ele deve retornar true, senão ele retorna false.
 
 ### versão 1.0.1 
 - Acrescentado a funcionalidade para tirar pontos ou espaços separadores, para não correr o risco de dar algum erro.
+
+### versão 1.0.2 e 1.0.3
+- Apenas atualização de dados no README.md
 
 ## Entenda os Números do Cartão de Crédito
 Os números do Cartão de Crédito se subdividem em grupos, onde cada grupo representam algo.
