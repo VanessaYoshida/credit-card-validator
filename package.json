@@ -1,6 +1,6 @@
 {
   "name": "validator-credit-card-1",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Credit Card Validator",
   "readmeFilename": "README.md",
   "main": "./lib/index.js",
