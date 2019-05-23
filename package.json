@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VanessaYoshida/credit-card-validator"
+    "url": "git+https://github.com/VanessaYoshida/credit-card-validator.git"
   },
   "keywords": [
     "credit",
